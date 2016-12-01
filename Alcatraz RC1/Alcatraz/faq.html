@@ -26,6 +26,9 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/alc2.fw.png">
     
+   
+   </script>
+    
 
 
 
@@ -134,6 +137,31 @@
             color:#d6cdc5;
             margin-bottom: 5%;
         }
+        
+        
+ /***********************according CSS********************/
+        .question {
+    position: relative;
+    border-bottom: 2px solid #4d4d4d;
+    background-color: #595959;
+          /** opacity: 0.5;**/
+            font-size: 1.1em;
+    color: white;
+    padding: 10px;
+    position: relative;
+            width: 70%;
+            border-radius: 4px;
+            cursor:pointer;
+
+}
+.question:before {
+    content: "\255E    ";}
+.question.open:before {
+    content: "\255F    ";
+}
+        .answer:before {
+    content: "\255A    ";
+}
     </style>
         
 </head>
@@ -242,20 +270,21 @@
         <a class="right carousel-control" href="#myCarousel" data-slide="next">
             <span class="icon-next"></span>
         </a>
+            
 
     </header>
 
     <!-- Page Content -->
     <div id="body" class="container">
-        <div class="content" id="faqContent">
+        <div class="content " id="faqContent">
             <h2>Frequently Asked Questions</h3>
-            <ul id="faqList">
+            <ul  id="faqList"> </ul>
+        </div>
+        
 
-            </ul>
 
         </div>
        
-    </div><!--body-->
         
         
         <footer id="footer">
@@ -297,13 +326,27 @@
         var fileLength = data.questions.length;
         var output = document.getElementById("faqList");
         for(i=0;i<fileLength;i++){
-            output.innerHTML = output.innerHTML.concat("<li class='quest'>"+data.questions[i].question+"</li><li class='answer'>"+data.questions[i].answer+"</li>");
+            output.innerHTML = output.innerHTML.concat("<li class='question'>"+data.questions[i].question+"</li><li class='answer'>"+data.questions[i].answer+"</li>");
         }
         
         
         
     </script>
+<script>
+        
 
+$('.answer').hide();
+
+$('.question').click(function() {
+    if ($(this).hasClass('open')) {
+        $(this).removeClass('open');
+        $(this).next('.answer').slideUp();
+    } else {
+        $(this).addClass('open');
+        $(this).next('.answer').slideDown();
+    }
+}); 
+    </script>
 </body>
 
 </html>
