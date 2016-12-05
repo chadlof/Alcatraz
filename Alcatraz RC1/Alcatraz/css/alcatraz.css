@@ -22,7 +22,7 @@
     background-color: black;
 }
 .fill {
-    background: radial-gradient(circle, #ffffff, #666666, #262626);
+    background: radial-gradient(circle, #262626, #666, #fff);
 }
 #logo {
     margin-top: -1%;
@@ -32,7 +32,7 @@
 }
 body {
     font-family: warsaw;
-    background-color: #6f7277;
+    background-color: #fff;
 }
 #body {
     
@@ -91,7 +91,7 @@ body {
     width: 25%;
     margin: auto;
     height: 100%;
-    color: #d6cdc5;
+    color: #222;
     font-size: 1.4vw;
     margin-left: 10%;
 }
@@ -138,7 +138,7 @@ body {
     margin-top: 5%;
     font-family: warsaw;
     font-size: 1.5em;
-    color: #d6cdc5;
+    color: #222;
     margin-bottom: 5%;
 }
 .faqLink {
@@ -216,7 +216,7 @@ body {
     background-color: black;
     margin: auto;
     text-align: center;
-    color: #d6cdc5;
+    color: #222;
     font-family: warsaw;
     font-size: 1.25vw;
     height: 300px;
