@@ -22,7 +22,9 @@
     background-color: black;
 }
 .fill {
-    background: radial-gradient(circle, #ffffff, #666666, #262626);
+    /**background: radial-gradient(circle, #262626, #666, #fff);**/
+    background: linear-gradient( #262626, #666, #fff);
+ /**   border-bottom-style:inset;**/
 }
 #logo {
     margin-top: -1%;
@@ -32,7 +34,7 @@
 }
 body {
     font-family: warsaw;
-    background-color: #6f7277;
+    background-color: #fff;
 }
 #body {
     
@@ -91,7 +93,7 @@ body {
     width: 25%;
     margin: auto;
     height: 100%;
-    color: #d6cdc5;
+    color: #222;
     font-size: 1.4vw;
     margin-left: 10%;
 }
@@ -138,7 +140,7 @@ body {
     margin-top: 5%;
     font-family: warsaw;
     font-size: 1.5em;
-    color: #d6cdc5;
+    color: #222;
     margin-bottom: 5%;
 }
 .faqLink {
@@ -216,7 +218,7 @@ body {
     background-color: black;
     margin: auto;
     text-align: center;
-    color: #d6cdc5;
+    color: #222;
     font-family: warsaw;
     font-size: 1.25vw;
     height: 300px;
@@ -347,5 +349,29 @@ input {
     margin: 0 auto;
     padding: 0 20px;
     box-sizing: border-box;
+}
+       /***********************answerccording CSS********************/
+        .question {
+    position: relative;
+    border-bottom: 2px solid #4d4d4d;
+    background-color: #595959;
+            filter:drop-shadow(-8px 4px 5px #cc0000);
+
+            font-size: 1.1em;
+    color: white;
+    padding: 10px;
+    position: relative;
+            width: 70%;
+            border-radius: 4px;
+            cursor:pointer;
+
+}
+.question:before {
+    content: "\255E    ";}
+.question.open:before {
+    content: "\255F    ";
+}
+        .answer:before {
+    content: "\255A    ";
 }
 /* end of software */
